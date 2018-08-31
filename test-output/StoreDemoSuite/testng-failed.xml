@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [StoreDemoSuite]">
+  <test name="ChromeTest(failed)">
+    <parameter name="BrowserType" value="cHROME"/>
+    <parameter name="url" value="http://store.demoqa.com"/>
+    <classes>
+      <class name="com.qa.tests.NewStoreDemoTests">
+        <methods>
+          <include name="navigatingToUrl"/>
+          <include name="CheckOutInfoPageTest"/>
+          <include name="setup"/>
+          <include name="CheckYourCartPage"/>
+          <include name="storedemoqa"/>
+          <include name="AccessoriesPageTest"/>
+          <include name="CheckOutFinalPageTest"/>
+        </methods>
+      </class> <!-- com.qa.tests.NewStoreDemoTests -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [StoreDemoSuite] -->

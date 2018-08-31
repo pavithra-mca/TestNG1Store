@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+    <line>
+      <![CDATA[<font colour="blue"><h2>I am running in chrome..<h2></font>]]>
+    </line>
+    <line>
+      <![CDATA[ONLINE STORE | Toolsqa Dummy Test site]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174133.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[ONLINE STORE | Toolsqa Dummy Test site]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174135.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Accessories | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174141.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Accessories | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174143.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Accessories | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174148.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Checkout | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174153.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Checkout | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174157.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Checkout | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174159.png' height='400' width='400'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[Transaction Results | ONLINE STORE]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174230.png' height='400' width='400'/></br>]]>
+    </line>
+  </reporter-output>
+  <suite name="StoreDemoSuite" duration-ms="82848" started-at="2018-08-31T21:41:11Z" finished-at="2018-08-31T21:42:34Z">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="82848" started-at="2018-08-31T21:41:11Z" finished-at="2018-08-31T21:42:34Z">
+      <class name="com.qa.tests.NewStoreDemoTests">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="setup" is-config="true" duration-ms="291" started-at="2018-08-31T17:41:11Z" finished-at="2018-08-31T17:41:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="navigatingToUrl(java.lang.String, java.lang.String)[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="navigatingToUrl" is-config="true" duration-ms="20739" started-at="2018-08-31T17:41:11Z" finished-at="2018-08-31T17:41:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://store.demoqa.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<font colour="blue"><h2>I am running in chrome..<h2></font>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- navigatingToUrl -->
+        <test-method status="PASS" signature="storedemoqa()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="storedemoqa" duration-ms="9798" started-at="2018-08-31T17:41:32Z" finished-at="2018-08-31T17:41:42Z">
+          <reporter-output>
+            <line>
+              <![CDATA[ONLINE STORE | Toolsqa Dummy Test site]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174133.png' height='400' width='400'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[ONLINE STORE | Toolsqa Dummy Test site]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174135.png' height='400' width='400'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[Accessories | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174141.png' height='400' width='400'/></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- storedemoqa -->
+        <test-method status="PASS" signature="AccessoriesPageTest()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="AccessoriesPageTest" duration-ms="10167" started-at="2018-08-31T17:41:42Z" depends-on-methods="com.qa.tests.NewStoreDemoTests.storedemoqa" finished-at="2018-08-31T17:41:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Accessories | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174143.png' height='400' width='400'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[Accessories | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174148.png' height='400' width='400'/></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AccessoriesPageTest -->
+        <test-method status="PASS" signature="CheckYourCartPage()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="CheckYourCartPage" duration-ms="6685" started-at="2018-08-31T17:41:52Z" depends-on-methods="com.qa.tests.NewStoreDemoTests.AccessoriesPageTest" finished-at="2018-08-31T17:41:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Checkout | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174153.png' height='400' width='400'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[Checkout | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174157.png' height='400' width='400'/></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckYourCartPage -->
+        <test-method status="PASS" signature="CheckOutInfoPageTest()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="CheckOutInfoPageTest" duration-ms="22874" started-at="2018-08-31T17:41:59Z" depends-on-methods="com.qa.tests.NewStoreDemoTests.CheckYourCartPage" finished-at="2018-08-31T17:42:22Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Checkout | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174159.png' height='400' width='400'/></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckOutInfoPageTest -->
+        <test-method status="PASS" signature="CheckOutFinalPageTest()[pri:0, instance:com.qa.tests.NewStoreDemoTests@5442a311]" name="CheckOutFinalPageTest" duration-ms="12458" started-at="2018-08-31T17:42:22Z" depends-on-methods="com.qa.tests.NewStoreDemoTests.CheckOutInfoPageTest" finished-at="2018-08-31T17:42:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Transaction Results | ONLINE STORE]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\VenkataNagesh\workspace\TestNG1\ScreenShots\083118-174230.png' height='400' width='400'/></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckOutFinalPageTest -->
+      </class> <!-- com.qa.tests.NewStoreDemoTests -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- StoreDemoSuite -->
+</testng-results>
