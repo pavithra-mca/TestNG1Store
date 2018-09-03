@@ -20,7 +20,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
-import com.sun.istack.internal.logging.Logger;
+import org.apache.log4j.Logger;
 
 
 
