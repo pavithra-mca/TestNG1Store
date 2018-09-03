@@ -112,7 +112,7 @@ public void ClickLink(WebDriver driver,WebElement we) throws Exception
 	}
 	catch(Exception e)
 	{
-		log.info("exception occured while clicking the button"+e.getMessage()+"\n"+e.getStackTrace()+"\nLine number:"+e.getStackTrace()[0].getLineNumber());
+		log.info("exception occured while clicking the link"+e.getMessage()+"\n"+e.getStackTrace()+"\nLine number:"+e.getStackTrace()[0].getLineNumber());
     	throw new Exception();
     }
 	
@@ -156,7 +156,7 @@ public void SelectDropDown(WebDriver driver,WebElement we,String value) throws E
 	}
 	catch(Exception e)
 	{
-		log.info("exception occured while clicking the button"+e.getMessage()+"\n"+e.getStackTrace()+"\nLine number:"+e.getStackTrace()[0].getLineNumber());
+		log.info("exception occured while selecting from dropdown"+e.getMessage()+"\n"+e.getStackTrace()+"\nLine number:"+e.getStackTrace()[0].getLineNumber());
     	throw new Exception();
     }
 	

@@ -34,6 +34,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -58,7 +59,6 @@ import javax.naming.directory.NoSuchAttributeException;
 
 import com.qa.utils.*;
 import com.qa.pages.*;
-
 
 import org.testng.reporters.*;
 
@@ -111,50 +111,70 @@ public class NewStoreDemoTests
 		
 	@Parameters({"url","BrowserType"})
 	@BeforeTest(alwaysRun=true)
-	public void navigatingToUrl(String url,String BrowserType) throws InterruptedException
+	public void navigatingToUrl(String url,String BrowserType) throws Exception
 	{
-		if(BrowserType.equalsIgnoreCase("IE"))
+		try
 		{
-			
-			System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
-			Reporter.log("<font colour=\"blue\"><h2>I am running in IE..<h2></font>");
-			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-			// Settings to Accept the SSL Certificate in the Capability object
-			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-			capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-			driver= new InternetExplorerDriver(capabilities);
-			log.info("IE driver intialized with capabilities");
+			if(BrowserType.equalsIgnoreCase("IE"))
+			{
+				
+				System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
+				Reporter.log("<font colour=\"blue\"><h2>I am running in IE..<h2></font>");
+				DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+				// Settings to Accept the SSL Certificate in the Capability object
+				capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+				capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+				driver= new InternetExplorerDriver(capabilities);
+				log.info("IE driver intialized with capabilities");
+				
+			}
+			else if(BrowserType.equalsIgnoreCase("chrome"))
+			{
+				
+				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+				Reporter.log("<font colour=\"blue\"><h2>I am running in chrome..<h2></font>");
+				driver= new ChromeDriver();
+				log.info("Chrome Driver Intialized");
+				
+				
+			}
+			else
+			{
+				
+				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+				Reporter.log("<font colour=\"blue\"><h2>I am running in firefox..<h2></font>");
+				driver= new FirefoxDriver();
+				log.info("Firefox driver Intialized");
+				
+				
+				
+			}
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.get(url);
+			Thread.sleep(3000);
+			wait = new FluentWait<WebDriver>(driver)
+					.withTimeout(30,TimeUnit.SECONDS)
+					.pollingEvery(5, TimeUnit.SECONDS)
+					.ignoring(NoSuchElementException.class);
+		}
+		catch(SessionNotCreatedException e)
+		{
+			e.printStackTrace();
+			log.info("Unable to create the session "+e.getMessage()+"\n Line Number."+e.getStackTrace()[0].getLineNumber());
+			throw new Exception();
+		}
+		
+		catch(Exception e)
+		{
+			log.info("**********************");
+			e.printStackTrace();
+			log.info("**********************");
+			log.info("Problem occured.. ."+"*****"+e.getMessage()+"\n"+e.getStackTrace()+"\nLine number:"+e.getStackTrace()[0].getLineNumber()+"\nClassName:"+e.getClass());
+	    	throw new Exception();
 			
 		}
-		else if(BrowserType.equalsIgnoreCase("chrome"))
-		{
-			
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			Reporter.log("<font colour=\"blue\"><h2>I am running in chrome..<h2></font>");
-			driver= new ChromeDriver();
-			log.info("Chrome Driver Intialized");
-			
-			
-		}
-		else
-		{
-			
-			System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-			Reporter.log("<font colour=\"blue\"><h2>I am running in firefox..<h2></font>");
-			driver= new FirefoxDriver();
-			log.info("Firefox driver Intialized");
-			
-			
-			
-		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(url);
-		Thread.sleep(3000);
-		wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(30,TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS)
-				.ignoring(NoSuchElementException.class);
+		
 		
 	}
 	@Test
